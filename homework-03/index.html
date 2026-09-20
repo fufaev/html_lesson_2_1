@@ -26,3 +26,25 @@
       <!-- СЕКЦИЯ 1: главное изображение через <picture> -->
       <section id="about">
         <h2>Главный объект</h2>
+        <figure>
+          <picture>
+            <!-- на узких экранах отдаём вертикальный кроп -->
+            <source
+              media="(max-width: 767px)"
+              srcset="images/hero-mobile.webp"
+              type="image/webp"
+            />
+            <!-- webp для широких экранов, весит меньше -->
+            <source srcset="images/hero.webp" type="image/webp" />
+            <!-- запасной вариант, если webp не поддерживается -->
+            <img
+              src="images/hero.jpg"
+              alt="Мирский замок: кирпичные стены с белыми декоративными поясами и угловая башня"
+              width="1200"
+              height="800"
+            />
+          </picture>
+          <figcaption>
+            Южный фасад замка — самая узнаваемая точка съёмки.
+          </figcaption>
+        </figure>
