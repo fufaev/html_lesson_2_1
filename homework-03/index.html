@@ -94,4 +94,33 @@
           </li>
         </ul>
       </section>
+      <!-- СЕКЦИЯ 2: галерея, srcset/sizes + графическая ссылка -->
+      <section id="gallery">
+        <h2>Галерея</h2>
+
+        <figure>
+          <a href="images/gallery-1200.jpg">
+            <!-- браузер сам возьмёт файл под ширину экрана; в alt — действие -->
+            <img
+              src="images/gallery-800.jpg"
+              srcset=",,"
+                images/gallery-400.jpg   400w
+                images/gallery-800.jpg   800w
+                images/gallery-1200.jpg 1200w
+              
+              sizes="(max-width: 600px) 100vw, 800px"
+              alt="Открыть увеличенную фотографию внутреннего двора замка"
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>
+            Внутренний двор: сейчас здесь проходят концерты и рыцарские
+            фестивали.
+          </figcaption>
+        </figure>
+      </section>
       
+      
+
