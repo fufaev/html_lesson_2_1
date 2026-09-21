@@ -17,13 +17,27 @@ body {
 }
 
 header,
-main {
-  width: min(100% - 32px, 1200px);
+main,
+footer {
+  width: min(100% - 32px, 960px);
   margin-inline: auto;
 }
 
 header {
-  padding-block: 32px;
+  padding-block: 32px 16px;
+}
+
+main {
+  padding-block: 16px;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
 }
 
 h1 {
@@ -39,12 +53,64 @@ h1 {
   list-style: none;
 }
 
+a {
+  color: #5a341c;
+}
+
 .main-nav a {
-  color: #333;
   text-decoration: none;
 }
 
-.main-nav a:hover,
-.main-nav a:focus-visible {
+a:hover {
   text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid #8c5b32;
+  outline-offset: 3px;
+}
+
+figure {
+  margin: 24px 0;
+}
+
+picture,
+img {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  margin-top: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.source-list {
+  padding-left: 24px;
+}
+
+footer {
+  padding-block: 24px;
+  border-top: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  header,
+  main,
+  footer {
+    width: min(100% - 24px, 960px);
+  }
+
+  header {
+    padding-top: 20px;
+  }
+
+  .main-nav {
+    gap: 8px 16px;
+  }
 }
