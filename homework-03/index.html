@@ -140,6 +140,42 @@
                 по той же схеме (figure > a > img + figcaption)
                 с loading="lazy"
             -->
+        <figure>
+          <a href="images/gallery_oven-1200.jpg">
+            <img
+              src="images/gallery_oven-800.jpg"
+              srcset="
+                images/gallery_oven-400   400w
+                images/gallery_oven-800   800w
+                images/gallery_ovaen-1200 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 800px"
+              alt="Открыть увеличенную фотографию деревянной избы с печью"
+              width="1200"
+              height="800"
+              loading="lazy">
+          </a>
+          <figcaption>Внутри деревянной избы: в левом углу растопленная печь рядом кочерга, у печи лавка, справа дверь в соседнюю комнату</figcaption>
+        </figure>
+
+        <figure>
+          <a href="images/bed_room-1200.jpg">
+            <img 
+              src="images/bed_room-883.jpg" 
+              srcset="
+                images/bed_room-400.jpg   400w
+                images/bed_room-883.jpg   883w
+                images/bed_room-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 800px"
+              alt="Открыть увеличенную фотографию спальни в избе"
+              width="600"
+              height="900"
+              loading="lazy"
+              >
+          </a>
+          <figcaption>Внутри деревянной избы: слева стол, накрытый скатертью, стул, справа заправленная кровать, на стене висят рушники</figcaption>
+        </figure>
       </section>
 
       <!-- СЕКЦИЯ 3: Маршрут (якорная цель #route) -->
