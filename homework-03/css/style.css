@@ -76,12 +76,23 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  outline: 4px solid #8c5b32;
+  outline-offset: 4px;
 }
 
 a:focus-visible {
-  outline: 3px solid #8c5b32;
-  outline-offset: 3px;
+  outline: 4px solid #8c5b32;
+  outline-offset: 4px;
+}
+
+.gallery-link {
+  display: block;
+}
+
+.gallery-link:hover,
+.gallery-link:focus-visible {
+  outline: 4px solid #8c5b32;
+  outline-offset: 4px;
 }
 
 figure {
