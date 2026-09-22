@@ -33,7 +33,6 @@
         for="theme-toggle"
         aria-label="Переключить цветовую тему"
       >
-        
         <span
           class="theme-toggle-icon theme-toggle-icon-light"
           aria-hidden="true"
@@ -64,11 +63,15 @@
               media="(max-width: 767px)"
               srcset="images/hero-mobile.webp"
               type="image/webp"
+              width="450"
+              height="600"
             >
 
             <source
               srcset="images/hero.webp"
               type="image/webp"
+              width="800"
+              height="600"
             >
 
             <img
@@ -76,6 +79,7 @@
               alt="Хозяйственный двор традиционной русской усадьбы"
               width="800"
               height="600"
+              fetchpriority="high"
             >
           </picture>
 
@@ -120,11 +124,16 @@
                 images/gallery-800.jpg 800w,
                 images/gallery-1200.jpg 1200w
               "
-              sizes="(max-width: 600px) 100vw, 800px"
+              sizes="
+                (max-width: 600px) calc(100vw - 24px),
+                (max-width: 992px) calc(100vw - 32px),
+                960px
+              "
               alt="Открыть увеличенную фотографию внутреннего убранства русской избы"
               width="1200"
               height="900"
               loading="lazy"
+              decoding="async"
             >
           </a>
 
