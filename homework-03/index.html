@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Виртуальная экскурсия по русской усадьбе XIX века</title>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">
+      Перейти к основному содержимому
+    </a>
+
+    <header id="top">
+      <h1>Виртуальная экскурсия по русской усадьбе XIX века</h1>
+
+      <p>
+        Знакомство с устройством традиционной русской усадьбы,
+        жилыми и хозяйственными постройками
+      </p>
+
+      <input
+        class="theme-toggle-input"
+        type="checkbox"
+        id="theme-toggle"
+        role="switch"
+        aria-label="Переключить цветовую тему"
+      >
+
+      <label
+        class="theme-toggle"
+        for="theme-toggle"
+        title="Переключить цветовую тему"
+      >
+        <span
+          class="theme-toggle-icon theme-toggle-icon-light"
+          aria-hidden="true"
+        ></span>
+
+        <span
+          class="theme-toggle-icon theme-toggle-icon-dark"
+          aria-hidden="true"
+        ></span>
+      </label>
+
+      <nav aria-label="Основная навигация">
+        <ul class="main-nav">
+          <li><a href="#about">Об усадьбе</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#sources">Источники</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="about">
+        <h2>Об усадьбе</h2>
+
+        <figure>
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="images/hero-mobile.webp"
+              type="image/webp"
+              width="450"
+              height="600"
+            >
+
+            <source
+              srcset="images/hero.webp"
+              type="image/webp"
+              width="800"
+              height="600"
+            >
+
+            <img
+              src="images/hero.jpg"
+              alt="Хозяйственный двор традиционной русской усадьбы"
+              width="800"
+              height="600"
+              fetchpriority="high"
+              title="Хозяйственный двор традиционной русской усадьбы"
+            >
+          </picture>
+
+          <figcaption>
+            Хозяйственный двор традиционной русской усадьбы
+          </figcaption>
+        </figure>
+
+        <p>
+          Русская усадьба объединяла жилые и хозяйственные постройки,
+          необходимые для повседневной жизни семьи. Организация двора
+          позволяла удобно вести домашнее хозяйство и хранить припасы
+        </p>
+
+        <p>
+          Центральное место занимала жилая изба. Рядом располагались
+          амбар, баня, хлев и другие хозяйственные сооружения,
+          каждое из которых имело собственное практическое назначение
+        </p>
+
+        <p>
+          Эта виртуальная экскурсия позволяет рассмотреть устройство
+          традиционного двора и познакомиться с отдельными элементами
+          крестьянского быта конца XIX века
+        </p>
+      </section>
+
+      <section id="gallery">
+        <h2>Фрагмент интерьера избы</h2>
+
+        <figure>
+          <a
+            class="gallery-link"
+            href="images/gallery-1200.jpg"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/gallery-800.jpg"
+              srcset="
+                images/gallery-400.jpg 400w,
+                images/gallery-800.jpg 800w,
+                images/gallery-1200.jpg 1200w
+              "
+              sizes="
+                (max-width: 600px) calc(100vw - 24px),
+                (max-width: 992px) calc(100vw - 32px),
+                960px
+              "
+              alt="Открыть увеличенную фотографию внутреннего убранства русской избы"
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
+              title="Открыть увеличенную фотографию внутреннего убранства русской избы"
+            >
+          </a>
+
+          <figcaption>
+            Внутреннее убранство жилой избы. Нажмите на изображение,
+            чтобы открыть увеличенную версию
+          </figcaption>
+        </figure>
+      </section>
+
+      <section id="sources">
+        <h2>Дополнительные материалы</h2>
+
+        <ul class="source-list">
+          <li>
+            <a
+              href="https://www.culture.ru/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Культура.РФ
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://ru.wikipedia.org/wiki/Усадьба"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Материал об усадьбах
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://commons.wikimedia.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Wikimedia Commons
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="#top">Наверх</a>
+      </p>
+
+      <p>
+        Учебная работа №3: адаптивная виртуальная экскурсия
+      </p>
+    </footer>
+  </body>
+</html>
