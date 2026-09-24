@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Двор</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <map name="back-map">
+                <!-- Зона в верхнем правом углу. Ссылка возвращает на index.html к разделу маршрута -->
+                <area shape="rect" coords="720,0,800,80" href="../index.html#route" alt="Назад к плану"
+                    title="Вернуться к плану усадьбы">
+            </map>
+
+            <!-- Сама картинка двора, путь выходит из папки pages и заходит в images -->
+            <img src="../images/dvor.jpg" usemap="#back-map" alt="Усадебный двор" width="800" height="600">
+
+        </section>
+    </main>
+
+</body>
+
+</html>
