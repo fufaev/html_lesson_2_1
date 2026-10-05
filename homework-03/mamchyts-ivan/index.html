@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальная экскурсия — Русская усадьба конца XVII - начала XIX вв</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- =============================================
+         HEADER + NAV [header]
+         ============================================= -->
+    <header>
+      <h1>Русская усадьба конца XVII - начало XIX вв.</h1>
+      <p>Экскурсия по традиционному комплексу жилых и хозяйственных построек боярского или дворянского имения интересна знакомством с самобытным деревянным теремом-крепостью и его независимым хозяйством, отражавшим подлинный уклад допетровской Руси.</p>
+
+      <nav>
+        <ul>
+          <li><a href="#about">Об объекте</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#route">Маршрут</a></li>
+          <!-- JUNIOR/PRO: добавьте ссылку на вторую страницу -->
+          <!-- <li><a href="pages/object.html">Подробнее об объекте</a></li> -->
+          <li><a href="pages/object.html">Общий план усадьбы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- =============================================
+         MAIN
+         ============================================= -->
+    <main>
+      <!-- СЕКЦИЯ 1: Главное изображение через <picture> [main-content] -->
+      <section id="about">
+        <h2>Главный объект</h2>
+
+        <figure>
+          <picture>
+            <!-- Мобильная версия — вертикальный кроп (art direction) -->
+            <source
+              media="(max-width: 767px)"
+              srcset="images/hero-mobile.webp"
+              type="image/webp"
+            >
+            <!-- WebP для широких экранов -->
+            <source srcset="images/hero.webp" type="image/webp">
+            <!-- JPEG fallback (обязательный запасной вариант) -->
+            <img
+              src="images/hero.jpg"
+              alt="Просторный П-образной формы двор русской усадьбы, слева изба, где живет хозяин усадьбы, спереди хлев, справа стоит телега"
+              width="1200"
+              height="800"
+            >
+            <!--
+                        ВНИМАНИЕ: loading="lazy" у hero НЕ ставить!
+                        Главное изображение должно загружаться сразу.
+                    -->
+          </picture>
+          <figcaption>Просторный П-образной формы двор русской усадьбы</figcaption>
+        </figure>
+
+        <p>
+          Перед нами типичная деревянная усадьба конца XIX столетия. Ее жилой дом и надворные постройки образуют замкнутый, уединенный двор, внутри которого была четко организована бытовая жизнь. Здесь и сегодня легко почувствовать неторопливый ритм и уют ушедшей эпохи.
+        </p>  
+        <p>Усадьбу возводили по традиционным правилам, опираясь только на старинные секреты плотницкого дела. Такой двор в форме буквы «П» спасал от сильного ветра и холода. При построении усадьбы учитывались и стороны света, так чтобы окна избы ловили как можно больше солнечного света и тепла.</p>
+        <p>Этот деревянный двор — яркий пример того, как архитектура может дарить человеку чувство абсолютной защищенности и покоя. Вместо массивного камня мастера использовали живое дерево, создав удивительно теплое и гостеприимное пространство. Простая и честная геометрия построек напоминает нам о временах, когда люди умели замедляться, ценить ручной труд и жить в идеальном согласии с окружающим миром.</p>
+
+        <!-- Внешние ссылки (минимум 3 на всей странице) -->
+        <ul>
+          <li>
+            <a
+              href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Что такое усадьба? | Статья на Википедии</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://ar.culture.ru/ru/exhibition/dvoryanskaya-izba"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Экспозиция дворянской усадьбы | culture.ru</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://rususadba.ru/ru/home/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Усадебное наследие России. XXI век | НП "Русская усадьба"</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- СЕКЦИЯ 2: Галерея с srcset/sizes -->
+      <section id="gallery">
+        <h2>Галерея</h2>
+
+        <figure>
+          <a href="images/gallery-1200.jpg">
+            <img
+              src="images/gallery-800.jpg"
+              srcset="
+                images/gallery-400.jpg   400w,
+                images/gallery-800.jpg   800w,
+                images/gallery-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 800px"
+              alt="Открыть увеличенную фотографию деревянной избы"
+              width="1200"
+              height="800"
+              loading="lazy"
+            >
+          </a>
+          <figcaption>Внутри деревянной избы: слева в углу стол, над ним божница, вдоль стен лавка</figcaption>
+        </figure>
+
+        <!--
+                JUNIOR: добавьте ещё минимум 2 изображения галереи
+                по той же схеме (figure > a > img + figcaption)
+                с loading="lazy"
+            -->
+        <figure>
+          <a href="images/gallery_oven-1200.jpg">
+            <img
+              src="images/gallery_oven-800.jpg"
+              srcset="
+                images/gallery_oven-400.jpg    400w,
+                images/gallery_oven-800.jpg    800w,
+                images/gallery_oven-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 800px"
+              alt="Открыть увеличенную фотографию деревянной избы с печью"
+              width="1200"
+              height="800"
+              loading="lazy">
+          </a>
+          <figcaption>Внутри деревянной избы: в левом углу растопленная печь рядом кочерга, у печи лавка, справа дверь в соседнюю комнату</figcaption>
+        </figure>
+
+        <figure>
+          <a href="images/bed_room-1200.jpg">
+            <img 
+              src="images/bed_room-883.jpg" 
+              srcset="
+                images/bed_room-400.jpg   400w,
+                images/bed_room-883.jpg   883w,
+                images/bed_room-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 100vw, 800px"
+              alt="Открыть увеличенную фотографию спальни в избе"
+              width="600"
+              height="900"
+              loading="lazy"
+              >
+          </a>
+          <figcaption>Внутри деревянной избы: слева стол, накрытый скатертью, стул, справа заправленная кровать, на стене висят рушники</figcaption>
+        </figure>
+      </section>
+
+      <!-- СЕКЦИЯ 3: Маршрут (якорная цель #route) -->
+      <section id="route">
+        <h2>Маршрут экскурсии</h2>
+
+        <ol>
+          <li>Душа русской усадьбы: двор</li>
+          <li>Внутреннее убранство избы конца XVII - начала XIX вв.</li>
+          <li>Амбар на опорах</li>
+          <li>Русская баня у реки</li>
+        </ol>
+      </section>
+    </main>
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
+    <footer>
+      <p>
+        <a href="#top">↑ Наверх</a>
+      </p>
+      <p>
+        Источники:
+        <a
+          href="https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Википедия</a
+        >
+      </p>
+      <p>&copy; 2026 — Мамчиц Иван, группа ППОИС-2609</p>
+    </footer>
+  </body>
+</html>
